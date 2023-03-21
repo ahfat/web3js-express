@@ -1,0 +1,14 @@
+const config = {
+    common: {
+        rpcURL: '<HTTP/RPC URL with your API key>',
+        wsURL:  '<Websocker URL with your API key>',
+        accountAddress1: '<public address without 0x>',
+        privateKey1: '<private key without 0x>',
+    },
+    events: {
+        contractAddress: '<smart contract address>',
+        abi: <smart contract ABI>
+    }
+}
+   
+module.exports = config

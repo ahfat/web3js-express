@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1= title
+    
+    p Contract Details
+    
+    table(style='width:70%', border='1')
+        tr
+            th( align='center' ) Address
+            th( align='center' ) Value
+        tr
+            td( align='center' ) #{contractAddress}
+            td( align='center' ) #{contractValue}
+
+    p Actions 
+
+    input( type='text' id='bidValue' name='bidValue' placeholder='Input value')
+    p
+    button( class='button' id='btnBid' onClick='window.location.assign("/contract/bid/" + document.getElementById( "bidValue" ).value ); document.getElementById( "txtStatus" ).value ="Transaction in progress..." ' ) Bid
+    p
+    input( class='label' type='text' id='txtStatus' name='txtStatus' value='Enter value and bid' readonly )
